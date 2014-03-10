@@ -1,0 +1,57 @@
+<script type='text/javascript'>
+     $(function() {
+       Dashing.widget_base_dimensions = [370, 340]
+       Dashing.numColumns = 5
+       Dashing.cycleDashboards({timeInSeconds: 20, stagger: true});
+     });
+     </script>
+</script>
+
+<% content_for :title do %>Bellcom Screen<% end %>
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="3" data-sizex="1" data-sizey="1">
+      <div data-id="nagios-main" data-view="Nagios" data-unordered="true" data-title="Nagios Main" data-moreinfo="Unacknowledged events"></div>
+    </li>
+    <li data-row="1" data-col="4" data-sizex="1" data-sizey="1">
+      <div data-id="nagios-extern" data-view="Nagios" data-unordered="true" data-title="Nagios Extern" data-moreinfo="Unacknowledged events"></div>
+    </li>
+  </ul>
+</div>
+
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="3" data-sizey="2">
+      <div data-id="picture" data-view="BigImage" data-image="duks.png" style="background-color:transparent;" data-max="true" ></div>
+    </li>
+  </ul>
+</div>
+
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="3" data-sizey="2">
+      <div data-id="picture" data-view="BigImage" data-image="problem.png" style="background-color:transparent;" data-max="true" ></div>
+    </li>
+  </ul>
+</div>
+
+<!--
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="3" data-sizey="1">
+      <div data-id="daily_dilbert" data-view="DailyDilbert"></div>
+    </li>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="github_status" data-view="GithubStatus" data-title="GitHub Status"></div>
+    </li>
+  </ul>
+</div>
+
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="aww" data-view="RandomAww"></div>
+    </li>
+  </ul>
+</div>
+-->

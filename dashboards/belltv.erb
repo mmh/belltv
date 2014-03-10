@@ -1,0 +1,78 @@
+<script type='text/javascript'>
+$(function() {
+  Dashing.widget_base_dimensions = [340, 360]
+  Dashing.numColumns = 5
+});
+</script>
+
+<% content_for :title do %>BellTV<% end %>
+
+<div class="gridster">
+  <ul>
+
+  <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+    <div data-view="Clock"></div>
+    <i class="icon-time icon-background"></i>
+  </li>
+
+  <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+    <div data-id="nagios-main" data-view="Nagios" data-unordered="true" data-title="Nagios Main" data-moreinfo="Unacknowledged events"></div>
+  </li>
+
+  <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+    <div data-id="nagios-extern" data-view="Nagios" data-unordered="true" data-title="Nagios Extern" data-moreinfo="Unacknowledged events"></div>
+  </li>
+
+  <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="duks" data-view="Text" data-title="Duks" data-text="When er køkkenbitch?"></div>
+  </li>
+
+  <li data-row="2" data-col="1" data-sizex="2" data-sizey="1">
+    <div data-id="twitter_mentions" data-view="Comments" data-title="Docker Tweets" style="background-color: #71388a"></div>
+  </li>
+
+  <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+    <div data-id="bandwidth" data-view="Meter" data-title="Bandwidth" data-min="0" data-max="100"></div>
+  </li>
+
+
+        <!--
+        <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+            <div data-id="welcome" data-view="Text" data-title="Hello" data-text="This is your shiny new dashboard." data-moreinfo="Husk at flushe caches før hver af disse datoer."></div>
+        </li>
+
+  <li data-row="2" data-col="1" data-sizex="3" data-sizey="1">
+    <div data-id="picture" data-view="BigImage" data-image="problem.png" style="background-color:transparent;" data-max="true" ></div>
+  </li>
+
+        <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+          <div data-id="lastdeploy" data-view="Text" data-title="Seneste deploy" data-moreinfo="" data-text="" style="background-color:#96bf48;"></div>
+          <i class="icon-heart icon-background"></i>
+        </li>
+
+        <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+            <div data-id="newrelic-chart" data-view="Iframe" data-url="https://rpm.newrelic.com/public/charts/7OrofT4y2TP" style="background-color: #fff"></div>
+        </li>
+
+        <li data-row="1" data-col="1" data-sizex="2" data-sizey="2">
+            <div data-id="monitis-recent-alerts" data-view="Monitis" data-title="Monitis alerts" data-moreinfo=""></div>
+            <i class="icon-bell icon-background"></i>
+        </li>
+
+        <li data-row="1" data-col="1" data-sizex="1" data-sizey="2">
+          <div data-id="visitor-count" data-view="List" data-unordered="true" data-title="Online brugere" data-moreinfo="opdateres én gang i minuttet"></div>
+          <i class="icon-bar-chart icon-background"></i>
+        </li>
+
+        <li data-row="1" data-col="1" data-sizex="1" data-sizey="2">
+            <div data-id="topsellers" data-view="List" data-unordered="true" data-title="Top sælgere (24h)" data-moreinfo="antal stk solgt grupperet pr. style"></div>
+            <i class="icon-bar-chart icon-background"></i>
+        </li>
+
+        <li data-row="1" data-col="1" data-sizex="1" data-sizey="2">
+            <div data-id="ordercount" data-view="List" data-title="Antal ordre" data-unordered="true" data-moreinfo="seneste time"></div>
+            <i class="icon-bar-chart icon-background"></i>
+        </li>
+        -->
+    </ul>
+</div>
