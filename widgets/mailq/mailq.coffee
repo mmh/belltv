@@ -50,43 +50,43 @@ class Dashing.Mailq extends Dashing.Widget
 
 # mail
   @accessor 'arrow', ->
+    arrow_direction = 'none'
     if @get('last')
-      arrow_direction = 'none'
       if parseInt(@get('current')) > parseInt(@get('last'))
         arrow_direction ='up' 
       else if parseInt(@get('current')) < parseInt(@get('last'))
         arrow_direction = 'down'
-      return 'icon-arrow-' + arrow_direction 
+    return 'icon-arrow-' + arrow_direction 
 
 # smtp
   @accessor 'arrowsmtp', ->
+    arrow_direction = 'none'
     if @get('lastsmtp')
-      arrow_direction = 'none'
       if parseInt(@get('currentsmtp')) > parseInt(@get('lastsmtp'))
         arrow_direction ='up' 
       else if parseInt(@get('currentsmtp')) < parseInt(@get('lastsmtp'))
         arrow_direction = 'down'
-      return 'icon-arrow-' + arrow_direction 
+    return 'icon-arrow-' + arrow_direction 
 
 # smtp2
   @accessor 'arrowsmtp2', ->
+    arrow_direction = 'none'
     if @get('lastsmtp2')
-      arrow_direction = 'none'
       if parseInt(@get('currentsmtp2')) > parseInt(@get('lastsmtp2'))
         arrow_direction ='up' 
       else if parseInt(@get('currentsmtp2')) < parseInt(@get('lastsmtp2'))
         arrow_direction = 'down'
-      return 'icon-arrow-' + arrow_direction 
+    return 'icon-arrow-' + arrow_direction 
 
 # smtp3
   @accessor 'arrowsmtp3', ->
+    arrow_direction = 'none'
     if @get('lastsmtp3')
-      arrow_direction = 'none'
       if parseInt(@get('currentsmtp3')) > parseInt(@get('lastsmtp3'))
         arrow_direction ='up' 
       else if parseInt(@get('currentsmtp3')) < parseInt(@get('lastsmtp3'))
         arrow_direction = 'down'
-      return 'icon-arrow-' + arrow_direction 
+    return 'icon-arrow-' + arrow_direction 
 
   onData: (data) ->
     # Example: $(@node).fadeOut().fadeIn() will make the node flash each time data comes in.
