@@ -1,0 +1,31 @@
+<h1 class="title" data-bind="title"></h1>
+
+<ul class="list-nostyle">
+  <li>
+    <span data-bind-class="arrow"></span>
+    <span class="label">mail.bellcom.dk </span>
+    <span class="value" data-bind="current | shortenedNumber | prepend prefix | append suffix"></span>
+    <span class="value" data-bind="difference"></span>
+  </li>
+  <li>
+    <span data-bind-class="arrowsmtp"></span>
+    <span class="label">smtp.bellcom.dk </span>
+    <span class="value" data-bind="currentsmtp | shortenedNumber | prepend prefix | append suffix"></span>
+    <span class="value" data-bind="differencesmtp"></span>
+  </li>
+  <li>
+    <span data-bind-class="arrowsmtp2"></span>
+    <span class="label">smtp2.bellcom.dk </span>
+    <span class="value" data-bind="currentsmtp2 | shortenedNumber | prepend prefix | append suffix"></span>
+    <span class="value" data-bind="differencesmtp2"></span>
+  </li>
+  <li>
+    <span data-bind-class="arrowsmtp3"></span>
+    <span class="label">smtp3.bellcom.dk </span>
+    <span class="value" data-bind="currentsmtp3 | shortenedNumber | prepend prefix | append suffix"></span>
+    <span class="value" data-bind="differencesmtp3"></span>
+  </li>
+</ul>
+
+<p class="updated-at" data-bind="updatedAtMessage"></p>
+

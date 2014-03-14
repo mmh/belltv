@@ -1,15 +1,15 @@
 // ----------------------------------------------------------------------------
 // Sass declarations
 // ----------------------------------------------------------------------------
-$background-color:  #ec663c;
+$background-color:  #4096ee;
 
 $title-color:       rgba(255, 255, 255, 0.7);
 $moreinfo-color:    rgba(255, 255, 255, 0.7);
 
 // ----------------------------------------------------------------------------
-// Widget-duks styles
+// Widget-lastproblem styles
 // ----------------------------------------------------------------------------
-.widget-duks {
+.widget-last-problem {
 
   background-color: $background-color;
 
@@ -26,11 +26,11 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
   }
 
   .small {
-    font-size: 20px;
+    font-size: 15px;
   }
 
   .large {
-    font-size: 40px;
+    font-size: 45px;
   }
 
   &.large h3 {

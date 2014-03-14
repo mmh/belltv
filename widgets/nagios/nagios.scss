@@ -5,6 +5,12 @@ $warning: #edde43;
 $failure: #e3394f;
 $error: #f75f00;
 
+@mixin animation($animation-name, $duration, $function, $animation-iteration-count:""){
+  -webkit-animation:  $animation-name $duration $function #{$animation-iteration-count};
+  -moz-animation:     $animation-name $duration $function #{$animation-iteration-count};
+  -ms-animation:      $animation-name $duration $function #{$animation-iteration-count};
+}
+
 .widget-nagios {
   li {
     position: absolute;
@@ -41,6 +47,7 @@ $error: #f75f00;
 
     &.yellow {
       background-color: $warning;
+      @include animation(status-danger-background, 2s, ease, infinite);
 
       p {
         &.updated-at {
@@ -51,6 +58,7 @@ $error: #f75f00;
 
     &.red {
       background-color: $failure;
+      @include animation(status-warning-background, 2s, ease, infinite);
 
       p {
         &.updated-at {
