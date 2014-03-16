@@ -90,7 +90,7 @@ class Dashing.Mailq extends Dashing.Widget
 
   onData: (data) ->
     # Example: $(@node).fadeOut().fadeIn() will make the node flash each time data comes in.
-    $(@node).fadeOut().fadeIn()
+    # $(@node).fadeOut().fadeIn()
     if data.status
       # clear existing "status-*" classes
       $(@get('node')).attr 'class', (i,c) ->
