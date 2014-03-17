@@ -13,5 +13,8 @@ gem 'twitter', '>= 5.0.0'
 
 gem 'httparty'
 
+# for klimato - https://github.com/danillotuhumury/klimato-dashing-widget
+gem 'json'
+
 # Nagios
 gem 'nagiosharder', :git => 'https://github.com/railsmachine/nagiosharder.git'

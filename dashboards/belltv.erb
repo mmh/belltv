@@ -10,113 +10,59 @@ $(function() {
 <div class="gridster">
   <ul>
 
-  <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-    <div data-view="Clock"></div>
-    <i class="icon-time icon-background"></i>
-  </li>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-view="Clock"></div>
+      <i class="icon-time icon-background"></i>
+    </li>
 
-  <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="duks" data-view="Duks" data-title="Duks" data-text="When er køkkenbitch?"></div>
-    <i class="icon-food icon-background"></i>
-  </li>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+        <div data-id="duks" data-view="Duks" data-title="Duks" data-text="When er køkkenbitch?"></div>
+      <i class="icon-food icon-background"></i>
+    </li>
 
-  <li data-row="1" data-col="3" data-sizex="2" data-sizey="1">
-    <div data-id="mailq" data-view="Mailq" data-title="Mail Queues"></div>
-    <i class="icon-envelope icon-background"></i>
-  </li>
+    <li data-row="1" data-col="3" data-sizex="2" data-sizey="1">
+      <div data-id="weatherdmi" data-view="BigImage" data-image="http://servlet.dmi.dk/byvejr/servlet/byvejr_dag1?by=6000&mode=long" style="background-color:transparent;" data-max="true"></div>
+    </li>
 
-  <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
-    <div data-id="nagios-main" data-view="Nagios" data-unordered="true" data-title="Nagios Main" data-moreinfo="Unacknowledged events"></div>
-    <i class="icon-warning-sign icon-background"></i>
-  </li>
+     <li data-row="1" data-col="5" data-sizex="1" data-sizey="1">
+        <div data-id="klimato" data-view="Klimato"></div>
+     </li>
 
-  <li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
-    <div data-id="nagios-extern" data-view="Nagios" data-unordered="true" data-title="Nagios Extern" data-moreinfo="Unacknowledged events"></div>
-    <i class="icon-warning-sign icon-background"></i>
-  </li>
+     <li data-row="1" data-col="6" data-sizex="1" data-sizey="2">
+       <div data-id="praleduks" data-view="Text" data-title="Praleduks" data-text="Praleduks listen" data-moreinfo="Se mere på bellcom.dk"></div>
+     </li>
 
-  <li data-row="2" data-col="3" data-sizex="3" data-sizey="1">
-      <div data-id="lastproblem" data-view="LastProblem" data-title="Last Problem" data-time="Kører det for vores Nagios?" data-lastproblems="Sidste problemer her" ddata-record="1 uge"></div>
-    <i class="icon-fire-extinguisher icon-background"></i>
-  </li>
+    <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="nagios-main" data-view="Nagios" data-unordered="true" data-title="Nagios Main" data-moreinfo="Unacknowledged events"></div>
+      <i class="icon-warning-sign icon-background"></i>
+    </li>
 
-  <li data-row="3" data-col="1" data-sizex="1" data-sizey="1">
-    <div data-id="bandwidthdown" data-view="Meter" data-title="Bandwidth Down" data-moreinfo="Mbit/s" data-min="0" data-max="100"></div>
-  </li>
+    <li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
+      <div data-id="nagios-extern" data-view="Nagios" data-unordered="true" data-title="Nagios Extern" data-moreinfo="Unacknowledged events"></div>
+      <i class="icon-warning-sign icon-background"></i>
+    </li>
 
-  <li data-row="3" data-col="2" data-sizex="1" data-sizey="1">
-    <div data-id="bandwidthup" data-view="Meter" data-title="Bandwidth Up" data-moreinfo="Mbit/s" data-min="0" data-max="100"></div>
-  </li>
+    <li data-row="2" data-col="3" data-sizex="3" data-sizey="1">
+        <div data-id="lastproblem" data-view="LastProblem" data-title="Last Problem" data-time="Kører det for vores Nagios?" data-lastproblems="Sidste problemer her" ddata-record="1 uge"></div>
+      <i class="icon-fire-extinguisher icon-background"></i>
+    </li>
 
-  <li data-row="3" data-col="3" data-sizex="2" data-sizey="1">
-    <div data-id="muninfweth0" data-view="BigImage" data-image="https://munin.bellcom.dk/munin-cgi/munin-cgi-graph/bellcom.dk/fw.bellcom.dk/if_eth0-day.png" style="background-color:transparent;" data-max="true"></div>
-  </li>
+    <li data-row="3" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="bandwidthdown" data-view="Meter" data-title="Bandwidth Down" data-moreinfo="Mbit/s" data-min="0" data-max="100"></div>
+    </li>
 
-  <li data-row="3" data-col="3" data-sizex="2" data-sizey="1">
-    <div data-id="wumo" data-view="BigImage" data-image="http://kindofnormal.com/img/wumo/2014/03/16.jpg" style="background-color:transparent;" data-max="true"></div>
-  </li>
+    <li data-row="3" data-col="2" data-sizex="1" data-sizey="1">
+      <div data-id="bandwidthup" data-view="Meter" data-title="Bandwidth Up" data-moreinfo="Mbit/s" data-min="0" data-max="100"></div>
+    </li>
 
-  <li data-row="3" data-col="5" data-sizex="2" data-sizey="1">
-    <div data-id="weatherdmi" data-view="BigImage" data-image="http://servlet.dmi.dk/byvejr/servlet/byvejr_dag1?by=6000&mode=long" style="background-color:transparent;" data-max="true"></div>
-  </li>
+    <li data-row="3" data-col="3" data-sizex="2" data-sizey="1">
+      <div data-id="muninfweth0" data-view="BigImage" data-image="https://munin.bellcom.dk/munin-cgi/munin-cgi-graph/bellcom.dk/fw.bellcom.dk/if_eth0-day.png" style="background-color:transparent;" data-max="true"></div>
+    </li>
+      
+    <li data-row="3" data-col="5" data-sizex="2" data-sizey="1">
+      <div data-id="mailq" data-view="Mailq" data-title="Mail Queues"></div>
+      <i class="icon-envelope icon-background"></i>
+    </li>
 
-        <!--
-<li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-  <div data-id="seattle-times" data-view="News" data-title="Seattle Times" data-interval="30"></div>
-</li>
-
-<li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-  <div data-id="devops-reactions" data-view="News" data-title="Seattle2 Times" data-interval="10"></div>
-</li>
-
-  <li data-row="2" data-col="1" data-sizex="2" data-sizey="1">
-    <div data-id="picture" data-view="Image" data-image="https://munin.bellcom.dk/munin-cgi/munin-cgi-graph/bellcom.dk/fw.bellcom.dk/if_eth0-day.png" ></div>
-  </li>
-
-  <li data-row="2" data-col="1" data-sizex="3" data-sizey="1">
-    <div data-id="picture" data-view="Image" data-image="http://ipnetstat.tele.dk/images/HX955678-kdnqz3-GigabitEthernet5-6.ifs-1301_20140310110204_halfday.png" ></div>
-  </li>
-
-        <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
-            <div data-id="welcome" data-view="Text" data-title="Hello" data-text="This is your shiny new dashboard." data-moreinfo="Husk at flushe caches før hver af disse datoer."></div>
-        </li>
-
-  <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
-      <div data-id="duks" data-view="Text" data-title="Duks" data-text="When er køkkenbitch?"></div>
-  </li>
-
-  <li data-row="2" data-col="1" data-sizex="3" data-sizey="1">
-    <div data-id="picture" data-view="BigImage" data-image="problem.png" style="background-color:transparent;" data-max="true" ></div>
-  </li>
-
-        <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-          <div data-id="lastdeploy" data-view="Text" data-title="Seneste deploy" data-moreinfo="" data-text="" style="background-color:#96bf48;"></div>
-          <i class="icon-heart icon-background"></i>
-        </li>
-
-        <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-            <div data-id="newrelic-chart" data-view="Iframe" data-url="https://rpm.newrelic.com/public/charts/7OrofT4y2TP" style="background-color: #fff"></div>
-        </li>
-
-        <li data-row="1" data-col="1" data-sizex="2" data-sizey="2">
-            <div data-id="monitis-recent-alerts" data-view="Monitis" data-title="Monitis alerts" data-moreinfo=""></div>
-            <i class="icon-bell icon-background"></i>
-        </li>
-
-        <li data-row="1" data-col="1" data-sizex="1" data-sizey="2">
-          <div data-id="visitor-count" data-view="List" data-unordered="true" data-title="Online brugere" data-moreinfo="opdateres én gang i minuttet"></div>
-          <i class="icon-bar-chart icon-background"></i>
-        </li>
-
-        <li data-row="1" data-col="1" data-sizex="1" data-sizey="2">
-            <div data-id="topsellers" data-view="List" data-unordered="true" data-title="Top sælgere (24h)" data-moreinfo="antal stk solgt grupperet pr. style"></div>
-            <i class="icon-bar-chart icon-background"></i>
-        </li>
-
-        <li data-row="1" data-col="1" data-sizex="1" data-sizey="2">
-            <div data-id="ordercount" data-view="List" data-title="Antal ordre" data-unordered="true" data-moreinfo="seneste time"></div>
-            <i class="icon-bar-chart icon-background"></i>
-        </li>
-        -->
-    </ul>
+  </ul>
 </div>

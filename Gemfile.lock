@@ -122,6 +122,7 @@ DEPENDENCIES
   dashing
   htmlentities
   httparty
+  json
   nagiosharder!
   nokogiri
   twitter (>= 5.0.0)
