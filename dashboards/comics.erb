@@ -1,0 +1,27 @@
+<script type='text/javascript'>
+$(function() {
+  Dashing.widget_base_dimensions = [300, 340]
+  Dashing.numColumns = 6
+});
+</script>
+
+<% content_for :title do %>BellTVComics<% end %>
+
+<div class="gridster">
+  <ul>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-view="Clock"></div>
+      <i class="icon-time icon-background"></i>
+    </li>
+
+    <li data-row="1" data-col="2" data-sizex="2" data-sizey="1">
+      <div data-id="wumo" data-view="BigImage" data-image="http://kindofnormal.com/img/wumo/2014/03/16.jpg" style="background-color:transparent;" data-max="true"></div>
+    </li>
+
+    <li data-row="2" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="dilbert" data-view="BigImage" data-image="/assets/daily_dilbert/latest.gif" style="background-color:transparent;" data-max="true"></div>
+    </li>
+
+  </ul>
+</div>
