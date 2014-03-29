@@ -48,6 +48,8 @@ body {
   font-size: 20px;
   color: $text-color;
   font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  // mmh, do disable scrollbar
+  overflow: hidden
 }
 
 b, strong {
