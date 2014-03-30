@@ -1,7 +1,8 @@
 <script type='text/javascript'>
 $(function() {
+  //Dashing.gridsterLayout('[{"col":2,"row":1},{"col":1,"row":1},{"col":3,"row":1},{"col":2,"row":2},{"col":3,"row":2},{"col":1,"row":2},{"col":5,"row":1},{"col":4,"row":2},{"col":2,"row":3}]')
   Dashing.widget_margins = [5, 5]
-  Dashing.widget_base_dimensions = [200, 100]
+  Dashing.widget_base_dimensions = [200, 200]
   Dashing.numColumns = 10
 });
 </script>
@@ -10,17 +11,82 @@ $(function() {
 
 <div class="gridster">
   <ul>
-    <li data-row="1" data-col="1" data-sizex="2" data-sizey="3">
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
       <div data-view="Clock"></div>
-      </li>
-      
-    <li data-row="1" data-col="3" data-sizex="5" data-sizey="3">
+    </li>
+
+    <li data-row="1" data-col="3" data-sizex="3" data-sizey="2">
       <div data-id="dilbert" data-view="BigImage" data-image="/assets/daily_dilbert/latest.gif" style="background-color:transparent;" data-max="true"></div>
     </li>
 
-    <li data-row="4" data-col="1" data-sizex="4" data-sizey="2">
+    <li data-row="3" data-col="1" data-sizex="3" data-sizey="2">
       <div data-id="wumo" data-view="BigImage" data-image="http://kindofnormal.com/img/wumo/2014/03/16.jpg" style="background-color:transparent;" data-max="true"></div>
     </li>
+      
+    <li data-row="4" data-col="5" data-sizex="2" data-sizey="2">
+      <div data-id="devopsreactions" data-view="Devopsreactions"></div>
+    </li>
 
+<!--
+     <li data-row="1" data-col="1" data-sizex="1" data-sizey="2">
+        <div data-id="klimato" data-view="Klimato"></div>
+     </li>
+
+     <li data-row="3" data-col="1" data-sizex="1" data-sizey="2">
+        <div data-id="klimato" data-view="Klimato"></div>
+     </li>
+
+     <li data-row="5" data-col="1" data-sizex="1" data-sizey="2">
+        <div data-id="klimato" data-view="Klimato"></div>
+     </li>
+
+     <li data-row="6" data-col="1" data-sizex="1" data-sizey="2">
+        <div data-id="klimato" data-view="Klimato"></div>
+     </li>
+
+
+      
+
+
+    <li data-row="4" data-col="5" data-sizex="3" data-sizey="3">
+
+
+    <div>
+
+<span class="mega-octicon octicon-git-commit"></span>
+
+<div class="time">
+  <time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2014-03-28T15:29:43Z" title="2014-03-28 15:29:43">March 28, 2014</time>
+</div>
+
+<div class="title">
+  <a href="https://github.com/Yani0029">Yani0029</a> <span>pushed</span> to <a href="/Svendborg/svendborg_views/tree/master">master</a> at <a href="https://github.com/Svendborg/svendborg_views" class="css-truncate css-truncate-target">Svendborg/svendborg_views</a>
+</div>
+
+<div class="details">
+  <a href="https://github.com/Yani0029"><img alt="Yani Xu" class="gravatar js-avatar" data-user="3328504" height="30" src="https://avatars1.githubusercontent.com/u/3328504?s=140" width="30" /></a>
+
+    <div class="commits ">
+      <ul>
+        <li>
+          <span title="Yani0029">
+            <img height="16" src="https://1.gravatar.com/avatar/709878eca160e44e7a5d6b9e9d11a468?d=https%3A%2F%2Fa248.e.akamai.net%2Fassets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png&amp;r=x&amp;s=140" width="16" />
+          </span>
+          <code><a href="/Svendborg/svendborg_views/commit/7f60f27a01e4abc2f732616773d494bb6b2a7977">7f60f27</a></code>
+          <div class="message">
+            <blockquote>
+              Add ustream video view of City Council meeting
+            </blockquote>
+          </div>
+        </li>
+      </ul>
+    </div>
+</div>
+
+
+    </div>
+    </li>
+      <div data-id="githubfeed" data-view="Githubfeed"></div>
+-->
   </ul>
 </div>

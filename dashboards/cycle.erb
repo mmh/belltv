@@ -1,0 +1,44 @@
+<script type='text/javascript'>
+$(function() {
+  Dashing.widget_margins = [5, 5]
+  Dashing.widget_base_dimensions = [200, 100]
+  Dashing.numColumns = 10
+  Dashing.cycleDashboards({timeInSeconds: 10, stagger: true});
+});
+</script>
+
+<% content_for :title do %>BellTVComics<% end %>
+
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="3">
+      <div data-view="Clock"></div>
+      </li>
+      
+    <li data-row="4" data-col="1" data-sizex="4" data-sizey="2">
+      <div data-id="wumo" data-view="BigImage" data-image="http://kindofnormal.com/img/wumo/2014/03/16.jpg" style="background-color:transparent;" data-max="true"></div>
+    </li>
+
+    <li data-row="4" data-col="5" data-sizex="3" data-sizey="3">
+      <div data-id="devopsreactions" data-view="Devopsreactions"></div>
+    </li>
+
+  </ul>
+</div>
+
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="3">
+      <div data-view="Clock"></div>
+      </li>
+      
+    <li data-row="1" data-col="3" data-sizex="5" data-sizey="3">
+      <div data-id="dilbert" data-view="BigImage" data-image="/assets/daily_dilbert/latest.gif" style="background-color:transparent;" data-max="true"></div>
+    </li>
+
+    <li data-row="4" data-col="5" data-sizex="3" data-sizey="3">
+      <div data-id="devopsreactions" data-view="Devopsreactions"></div>
+    </li>
+
+  </ul>
+</div>

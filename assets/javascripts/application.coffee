@@ -16,6 +16,7 @@ Dashing.on 'ready', ->
 
   Batman.setImmediate ->
     $('.gridster').width(contentWidth)
+# mmh, added stuff for cycle dashboards - https://gist.github.com/jwalton/6670630
     $('.gridster > ul').gridster
       widget_margins: Dashing.widget_margins
       widget_base_dimensions: Dashing.widget_base_dimensions
