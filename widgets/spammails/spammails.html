@@ -1,16 +1,5 @@
-<h1 class="title" data-bind="title"></h1>
-<table>
-  <tr><td>Time</td><td>Subject</td><td>Sender</td><td>Recipient</td></tr>
-  <tr data-bind="spammails | raw">
+
+<p class="title">Recent spammails for bellcom.dk</p>
+<table data-bind="spammails | raw">
 </table>
-<!--
-<p class="small">Denne uges duks:</p>
-
-<p class="large" data-bind="thisweek"></p>
-
-<p class="small">Næste uges duks:</p>
-
-<p class="large" data-bind="nextweek"></p>
-
--->
 <p class="updated-at" data-bind="updatedAtMessage"></p>
