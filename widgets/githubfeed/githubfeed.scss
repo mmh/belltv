@@ -1,0 +1,40 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+//$background-color:  #4096ee;
+$background-color:  #3A3A3A;
+
+$title-color:       rgba(255, 255, 255, 0.7);
+$moreinfo-color:    rgba(255, 255, 255, 0.7);
+
+// ----------------------------------------------------------------------------
+// Widget-githubfeed styles
+// ----------------------------------------------------------------------------
+.widget-githubfeed {
+
+  background-color: $background-color;
+
+  .title {
+    color: $title-color;
+  }
+
+  .more-info {
+    color: $moreinfo-color;
+  }
+
+  .updated-at {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .small {
+    font-size: 15px;
+  }
+
+  .large {
+    font-size: 45px;
+  }
+
+  &.large h3 {
+    font-size: 65px;
+  }
+}
