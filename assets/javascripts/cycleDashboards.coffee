@@ -1,4 +1,4 @@
-# Flying Widgets v0.1.1
+# Flying Widgets v0.1.0
 #
 # To use, put this file in assets/javascripts/cycleDashboard.coffee.  Then find this line in
 # application.coffee:
@@ -373,7 +373,7 @@ Dashing.cycleDashboardsNow = do () ->
         return if transitionInProgress
         transitionInProgress = true
 
-        {stagger, fastTransition} = options
+        {stagger, fastTransition, moveBy} = options
         stagger = !!stagger
         fastTransition = !!fastTransition
 
@@ -381,9 +381,25 @@ Dashing.cycleDashboardsNow = do () ->
 
         # Work out which dashboard to show
         oldVisibleIndex = visibleIndex
-        visibleIndex++
+        # If moveBy is undefined or 0, set to 1
+        if moveBy is undefined or moveBy is 0
+           moveBy = 1
+        # If negative dashboards count, move to the first
+        if moveBy is -1 * $dashboards.length
+           visibleIndex = 0
+        # If dashboards number, move to the last
+        else if moveBy is $dashboards.length
+           visibleIndex = $dashboards.length - 1
+        else
+           visibleIndex = visibleIndex + moveBy
+           
+        # restore default moveBy value to 1
+        options.moveBy = 1
+           
         if visibleIndex >= $dashboards.length
             visibleIndex = 0
+        if visibleIndex < 0
+            visibleIndex = $dashboards.length - 1
 
         if oldVisibleIndex == visibleIndex
             # Only one dashboard.  Disable fast transitions
@@ -401,7 +417,6 @@ Dashing.cycleDashboardsNow = do () ->
         hideFunction = pickMember hideFunctions
 
         showNewDashboard = () ->
-            options.onTransition?($($dashboards[visibleIndex]))
             showFunction = null
             chainsTo = hideFunction.value.chainsTo
             if isString chainsTo
@@ -446,9 +461,8 @@ getURLParameter = (name) ->
 #   randomized times.  This gives a more random look.  If false, then all wigets will be moved
 #   at the same time.  Note if `timeInSeconds` is 0, then this option is ignored (but can, instead,
 #   be passed to `cycleDashboardsNow()`.)
-# * `fastTransition` - If true, then we will run the show and hide transitions simultaneously.
+# * 'fastTransition' - If true, then we will run the show and hide transitions simultaneously.
 #   This gets your new dashboard up onto the screen faster.
-# * `onTransition($newDashboard)` - A function to call before a dashboard is displayed.
 #
 Dashing.cycleDashboards = (options) ->
     timeInSeconds = if options.timeInSeconds? then options.timeInSeconds else 20
@@ -468,13 +482,31 @@ Dashing.cycleDashboards = (options) ->
         $(dashboard).css "position": "absolute"
 
     # If the user specified a dashboard, then don't cycle from one dashboard to the next.
-    if !startDashboardParam? and (timeInSeconds > 0)
+    if !startDashboardParam?
         cycleFn = () -> Dashing.cycleDashboardsNow(options)
-        setInterval cycleFn, timeInSeconds * 1000
+        if timeInSeconds > 0 then setInterval cycleFn, timeInSeconds * 1000
 
     $(document).keypress (event) ->
-        # Cycle to next dashboard on space
-        if event.keyCode is 32 then Dashing.cycleDashboardsNow(options)
+        moveBy = 0
+        if event.keyCode is 32 or event.keyCode is 39
+           # Cycle to next dashboard on space or right arrow
+           moveBy = 1
+        else if event.keyCode is 37
+           # Cycle back on left arrow
+           moveBy = -1
+        else if event.keyCode is 36
+           # Cycle to the first dashboard on home key press
+           # Set to negative dashboards count
+           moveBy = -1 * $dashboards.length
+        else if event.keyCode is 35
+           # Cycle to the last dashboard on end key press
+           # Set to dashboards count
+           moveBy = $dashboards.length
+
+        if moveBy isnt 0
+           options.moveBy = moveBy
+           Dashing.cycleDashboardsNow(options)
+
         return true
 
 # Customized version of `Dashing.gridsterLayout()` which supports multiple dashboards.
