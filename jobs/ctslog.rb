@@ -30,7 +30,3 @@ SCHEDULER.every '1m', :first_in => 0 do |job|
   send_event('ctslog', { items: data })
 
 end
-
-#puts mash.hits.hits.first._source.syslog_message
-#puts mash
-

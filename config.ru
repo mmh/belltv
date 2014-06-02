@@ -1,4 +1,3 @@
-#require "sinatra/cyclist"
 require 'dashing'
 
 $config = YAML.load File.open("config.yml")
@@ -29,7 +28,5 @@ end
 map Sinatra::Application.assets_prefix do
   run Sinatra::Application.sprockets
 end
-
-#set :routes_to_cycle_through, [:nagios, :sample]
 
 run Sinatra::Application

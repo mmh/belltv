@@ -27,6 +27,7 @@ class GithubFeed
   end
 
   def events
+    # mmh, changed from org events to user events
     #events = json_get("/users/#{@user}/events/orgs/#{@org}")
     events = json_get("/users/#{@user}/received_events")
     events.map do |event_json|
