@@ -18,3 +18,12 @@ gem 'json'
 
 # Nagios
 gem 'nagiosharder', :git => 'https://github.com/railsmachine/nagiosharder.git'
+
+# Elasticsearch for logstash queries from CTS
+gem 'elasticsearch'
+
+# for elasticsearch
+gem 'hashie'
+
+# for github feed
+gem 'faraday'

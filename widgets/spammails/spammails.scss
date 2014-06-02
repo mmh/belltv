@@ -15,6 +15,7 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
 
   .title {
     color: $title-color;
+    font-size: 37px;
   }
 
   .more-info {
@@ -25,15 +26,11 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
     color: rgba(255, 255, 255, 0.7);
   }
 
-  .small {
-    font-size: 20px;
-  }
-
-  .large {
-    font-size: 40px;
+  th {
+    font-size: 37px;
   }
 
   td {
-    font-size: 14px;
+    font-size: 37px;
   }
 }

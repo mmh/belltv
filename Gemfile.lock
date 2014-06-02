@@ -38,6 +38,14 @@ GEM
       thin
       thor
     descendants_tracker (0.0.3)
+    elasticsearch (1.0.2)
+      elasticsearch-api (= 1.0.2)
+      elasticsearch-transport (= 1.0.2)
+    elasticsearch-api (1.0.2)
+      multi_json
+    elasticsearch-transport (1.0.2)
+      faraday
+      multi_json
     equalizer (0.0.9)
     eventmachine (1.0.3)
     execjs (2.0.2)
@@ -120,6 +128,9 @@ PLATFORMS
 
 DEPENDENCIES
   dashing
+  elasticsearch
+  faraday
+  hashie
   htmlentities
   httparty
   json

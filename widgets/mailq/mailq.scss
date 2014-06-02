@@ -16,6 +16,7 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
   background-color: $background-color;
 
   .title {
+    padding-bottom: 20px;
     color: $title-color;
   }
 
@@ -40,6 +41,7 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
   }
 
   li {
+    font-size: 35px;
     margin-bottom: 5px;
   }
 
@@ -60,10 +62,6 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
 
   .more-info {
     color: $moreinfo-color;
-  }
-
-  .large {
-    font-size: 45px;
   }
 
   .updated-at {

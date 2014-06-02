@@ -1,0 +1,166 @@
+<script type='text/javascript'>
+$(function() {
+  Dashing.widget_margins = [5, 5]
+  //Dashing.widget_base_dimensions = [370, 360]
+  Dashing.widget_base_dimensions = [180, 170]
+  Dashing.numColumns = 10
+  Dashing.cycleDashboards({timeInSeconds: 300, stagger: true});
+});
+</script>
+
+<script type='text/javascript'>
+$(function() {
+
+});
+</script>
+
+<% content_for :title do %>BellTV<% end %>
+
+<div class="gridster">
+  <ul>
+
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="2">
+      <div data-view="Clock"></div>
+      <i class="icon-time icon-background"></i>
+    </li>
+    
+    <li data-row="1" data-col="3" data-sizex="8" data-sizey="6">
+      <div data-id="github_feed" data-view="GithubFeed" data-title="Github News Feed"></div>
+    </li>
+    
+    <li data-row="3" data-col="1" data-sizex="2" data-sizey="2">
+        <div data-id="duks" data-view="Duks" data-title="Duks" data-text="When er køkkenbitch?"></div>
+      <i class="icon-food icon-background"></i>
+    </li>
+
+<!--
+
+
+    <li data-row="3" data-col="1" data-sizex="2" data-sizey="4">
+      <div data-id="praleduks" data-view="Text" data-title="Praleduks" data-text="Praleduks listen" data-moreinfo="Se mere på bellcom.dk"></div>
+      <i class="icon-linux icon-background"></i>
+    </li>
+
+
+<li data-row="3" data-col="1" data-sizex="6" data-sizey="2">
+      <div data-id="lastproblem" data-view="LastProblem" data-title="Last Problem" data-time="Kører det for vores Nagios?" data-lastproblems="Sidste problemer her" ddata-record="1 uge"></div>
+      <i class="icon-fire-extinguisher icon-background"></i>
+    </li>
+
+
+
+
+      
+  </ul>
+</div>
+
+
+<div class="gridster">
+  <ul>
+
+
+    <li data-row="1" data-col="5" data-sizex="2" data-sizey="1">
+      <div data-id="devopstext" data-view="Text" data-title="Programming Excuses" data-text="Stuff goes here"></div>
+    </li>
+
+    <li data-row="2" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="wumo" data-view="BigImage" data-image="http://kindofnormal.com/img/wumo/2014/03/16.jpg" style="background-color:transparent;" data-max="true"></div>
+    </li>
+
+    <li data-row="2" data-col="3" data-sizex="2" data-sizey="1">
+      <div data-id="dilbert" data-view="BigImage" data-image="/assets/daily_dilbert/latest.gif" style="background-color:transparent;" data-max="true"></div>
+    </li>
+
+    <li data-row="2" data-col="5" data-sizex="2" data-sizey="1">
+      <div data-id="devopsreactions" data-view="BigImage" data-image="http://i.imgur.com/EoMjS7z.gif" style="background-color:transparent;" data-max="true"></div>
+    </li>
+
+    <li data-row="3" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="datoer" data-view="Text" data-title="Upcoming stuff" data-text="What's going to happen"></div>
+    </li>
+
+    <li data-row="3" data-col="3" data-sizex="2" data-sizey="1">
+      <div data-id="map0" data-view="Iframe" data-url="http://193.84.27.11/map.php?PHPSESSID=75c373bc3eb5259b100b388d76bb4ce0&mapFull&currentMap=0"></div>
+    </li>
+
+    <li data-row="3" data-col="5" data-sizex="2" data-sizey="1">
+      <div data-id="map1" data-view="Iframe" data-url="http://193.84.27.11/map.php?PHPSESSID=75c373bc3eb5259b100b388d76bb4ce0&mapFull&currentMap=1"></div>
+    </li>
+
+  -->
+
+  </ul>
+</div>
+
+<!-- good page 1 -->
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="2">
+      <div data-view="Clock"></div>
+      <i class="icon-time icon-background"></i>
+    </li>
+
+    <li data-row="1" data-col="3" data-sizex="2" data-sizey="2">
+      <div data-id="nagios-main" data-view="Nagios" data-unordered="true" data-title="Nagios Main" data-moreinfo="Unacknowledged events"></div>
+      <i class="icon-warning-sign icon-background"></i>
+      </li>
+
+    <li data-row="1" data-col="3" data-sizex="2" data-sizey="2">
+      <div data-id="nagios-extern" data-view="Nagios" data-unordered="true" data-title="Nagios Extern" data-moreinfo="Unacknowledged events"></div>
+      <i class="icon-warning-sign icon-background"></i>
+    </li>
+
+    <li data-row="1" data-col="5" data-sizex="2" data-sizey="2">
+      <div data-id="bandwidthdown" data-view="Meter" data-title="Bandwidth Out" data-moreinfo="Mbit/s from hosting" data-min="0" data-max="250"></div>
+    </li>
+
+    <li data-row="1" data-col="7" data-sizex="2" data-sizey="2">
+      <div data-id="bandwidthup" data-view="Meter" data-title="Bandwidth In" data-moreinfo="Mbit/s from hosting" data-min="0" data-max="250"></div>
+    </li>
+
+    <li data-row="3" data-col="1" data-sizex="6" data-sizey="2">
+      <div data-id="ctslog" data-view="List" data-title="CTS Log" data-unordered="true"></div>
+    </li>
+
+    <li data-row="3" data-col="7" data-sizex="4" data-sizey="2">
+      <div data-id="muninfweth0" data-view="BigImage" data-image="https://munin.bellcom.dk/munin-cgi/munin-cgi-graph/bellcom.dk/fw.bellcom.dk/if_eth0-day.png" style="background-color:white;" data-max="true"></div>
+    </li>
+
+    <li data-row="5" data-col="1" data-sizex="3" data-sizey="2">
+      <div data-id="map0" data-view="Iframe" data-url="http://cts.bellcom.dk/map.php?PHPSESSID=75c373bc3eb5259b100b388d76bb4ce0&mapFull&currentMap=0"></div>
+    </li>
+
+    <li data-row="5" data-col="4" data-sizex="3" data-sizey="2">
+      <div data-id="map1" data-view="Iframe" data-url="http://cts.bellcom.dk/map.php?PHPSESSID=75c373bc3eb5259b100b388d76bb4ce0&mapFull&currentMap=1"></div>
+    </li>
+  </ul>
+</div>
+
+<!-- good page 2 -->
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="2">
+      <div data-view="Clock"></div>
+      <i class="icon-time icon-background"></i>
+    </li>
+    
+    <li data-row="1" data-col="3" data-sizex="4" data-sizey="2">
+      <div data-id="weatherdmi" data-view="BigImage" data-image="http://servlet.dmi.dk/byvejr/servlet/byvejr_dag1?by=6000&mode=long" style="background-color:#dbdbd2;" data-max="true"></div>
+    </li>
+
+    <li data-row="1" data-col="7" data-sizex="2" data-sizey="2">
+      <div data-id="klimato" data-view="Klimato"></div>
+      <i class="icon-sun icon-background"></i>
+    </li>
+     
+    <li data-row="1" data-col="9" data-sizex="2" data-sizey="2">
+      <div data-id="mailq" data-view="Mailq" data-title="Mail Queues" data-current="0" data-currentsmtp="0" data-currentsmtp2="0" data-currentsmtp3="0" ></div>
+      <i class="icon-envelope icon-background"></i>
+    </li>
+    
+     <li data-row="3" data-col="1" data-sizex="8" data-sizey="4">
+      <div data-id="spammails" data-view="Spammails" data-title="Spammails"></div>
+      <i class="icon-exclamation-sign icon-background"></i>
+    </li>
+  </ul>
+</div>

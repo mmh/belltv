@@ -45,7 +45,7 @@ html {
 body {
   margin: 0;
   background-color: $background-color;
-  font-size: 30px;
+  font-size: 20px;
   color: $text-color;
   font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   // mmh, do disable scrollbar
@@ -95,19 +95,19 @@ h1, h2, h3, h4, h5, p {
   margin: 0;
 }
 h1 {
-//  margin-bottom: 12px;
+  margin-bottom: 12px;
   text-align: center;
   font-size: 30px;
   font-weight: 400;
 }
 h2 {
   text-transform: uppercase;
-  font-size: 96px;
+  font-size: 76px;
   font-weight: 700;
   color: $text-color;
 }
 h3 {
-  font-size: 35px;
+  font-size: 25px;
   font-weight: 600;
   color: $text-color;
 }
@@ -126,10 +126,10 @@ h3 {
   left: 0;
   top: 0;
   opacity: 0.1;
-  font-size: 300px;
+  font-size: 275px;
   text-align: center;
 //mmh, changed from default 82px 
-  margin-top: 42px;
+  margin-top: 52px;
 }
 
 .list-nostyle {
@@ -182,7 +182,7 @@ h3 {
 }
 
 .more-info {
-  font-size: 25px;
+  font-size: 15px;
   position: absolute;
   bottom: 32px;
   left: 0;
@@ -190,7 +190,7 @@ h3 {
 }
 
 .updated-at {
-  font-size: 25px;
+  font-size: 15px;
   position: absolute;
   bottom: 12px;
   left: 0;
@@ -226,7 +226,7 @@ h3 {
   background: white;
   top: 100px;
   color: black;
-  font-size: 25px;
+  font-size: 15px;
   padding-bottom: 4px;
 
   textarea {

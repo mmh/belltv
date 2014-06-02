@@ -3,13 +3,16 @@ class Dashing.BigImage extends Dashing.Widget
     resizeImage = ($img, maxWidth, maxHeight, maximize) ->
         width = $img.width()
         height = $img.height()
-        delta_x = width-maxWidth
-        delta_y = height-maxHeight
 
-        if delta_x<=delta_y
-          $img.css("height", maxHeight)
-        else
-          $img.css("width", maxWidth)
+        if maximize or (width > maxWidth) or (height > maxHeight)
+            if width > height
+                ratio = maxWidth / width
+                $img.css("width", maxWidth)
+                $img.css("height", height * ratio)
+            else
+                ratio = maxHeight / height
+                $img.css("width", width * ratio)
+                $img.css("height", maxHeight)
 
     getImageSize = ($img, done) ->
         loadedHandler = ->

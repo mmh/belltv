@@ -27,14 +27,12 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
   }
 
   .small {
-    font-size: 15px;
+    font-size: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
   }
 
   .large {
-    font-size: 45px;
-  }
-
-  &.large h3 {
     font-size: 65px;
   }
 }
