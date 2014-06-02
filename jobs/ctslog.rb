@@ -19,6 +19,8 @@ SCHEDULER.every '1m', :first_in => 0 do |job|
   
   mash.hits.hits.each do |result|
         x = DateTime.strptime(result._source.received_at,date_and_time)
+        # quick way to add 2 hours :)
+        x = x + Rational(60*60*2, 86400)
         data.push({
           label: x.strftime("%F %T"),
           value: result._source.syslog_message
