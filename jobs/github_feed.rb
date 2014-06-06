@@ -117,7 +117,7 @@ class String
   end
 end
 
-SCHEDULER.every '30s', :first_in => 0 do
+SCHEDULER.every '120s', :first_in => 0 do
   feed = GithubFeed.new(user, org, token)
   events = feed.events.map do |event|
     {
