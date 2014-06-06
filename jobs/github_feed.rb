@@ -111,12 +111,18 @@ org          = config[:github_org]
 token        = config[:github_token]
 hist_size    = 7
 
-SCHEDULER.every '120s', :first_in => 0 do
+class String
+  def truncate()
+    length > 60 ? "#{self[0...60]}..." : self
+  end
+end
+
+SCHEDULER.every '30s', :first_in => 0 do
   feed = GithubFeed.new(user, org, token)
   events = feed.events.map do |event|
     {
       commit_sha: event.commit[:sha],
-      message:    event.commit[:message],
+      message:    event.commit[:message].truncate,
       author:     event.author[:login],
       url:        event.commit[:url],
       branch:     event.branch,
@@ -128,3 +134,4 @@ SCHEDULER.every '120s', :first_in => 0 do
 
   send_event('github_feed', {items: events[0..hist_size-1]}) unless events.empty?
 end
+
