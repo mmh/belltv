@@ -1,17 +1,40 @@
 <script type='text/javascript'>
 $(function() {
-  Dashing.widget_margins = [5, 5]
-  Dashing.widget_base_dimensions = [300, 340]
-  Dashing.numColumns = 6
+  Dashing.widget_base_dimensions = [180, 170]
+  Dashing.numColumns = 10
 });
 </script>
 
 <% content_for :title do %>Bellcom Screen<% end %>
 <div class="gridster">
   <ul>
-    <li data-row="1" data-col="1" data-sizex="3" data-sizey="1">
-      <div data-id="spammails" data-view="Spammails" data-title="Spammails"></div>
-      <i class="icon-exclamation-sign icon-background"></i>
+<!--
+    <li data-row="3" data-col="1" data-sizex="6" data-sizey="2">
+      <div data-id="lastproblem" data-view="LastProblem" data-title="Last Problem" data-time="Kører det for vores Nagios?" data-lastproblems="Sidste problemer her" ddata-record="1 uge"></div>
+      <i class="icon-fire-extinguisher icon-background"></i>
     </li>
+
+    <li data-row="3" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="datoer" data-view="Text" data-title="Upcoming stuff" data-text="What's going to happen"></div>
+    </li>
+-->
+
+    <li data-row="1" data-col="1" data-sizex="6" data-sizey="3">
+      <div data-id="wumo" data-view="BigImage" data-image="http://kindofnormal.com/img/wumo/2014/03/16.jpg" style="background-color:transparent;" data-max="true"></div>
+    </li>
+
+    <li data-row="4" data-col="1" data-sizex="5" data-sizey="2">
+      <div data-id="dilbert" data-view="BigImage" data-image="/assets/daily_dilbert/latest.gif" style="background-color:transparent;" data-max="true"></div>
+    </li>
+
+    <li data-row="1" data-col="7" data-sizex="4" data-sizey="3">
+      <div data-id="devopsreactions" data-view="BigImage" data-image="http://i.imgur.com/EoMjS7z.gif" style="background-color:transparent;" data-max="true"></div>
+    </li>
+
+    <li data-row="4" data-col="7" data-sizex="5" data-sizey="1">
+      <!--<div data-id="devopstext" data-view="Text" data-title="Programming Excuses" data-text="Stuff goes here"></div>-->
+      <div data-id="devopstext" data-view="Text" data-text="Stuff goes here"></div>
+    </li>
+
   </ul>
 </div>
