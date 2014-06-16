@@ -34,7 +34,7 @@ SCHEDULER.every '1m', :first_in => 0 do |job|
         end
         data.push({
           label: x.strftime("%F %T"),
-          value: "<span style=color:" + color + ">" + result._source.syslog_message + "</span>"
+          value: "<span style=color:" + color + ">" + result._source[:@message] + "</span>"
         });
   end
   
