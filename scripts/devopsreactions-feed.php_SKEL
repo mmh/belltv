@@ -1,0 +1,48 @@
+#!/usr/bin/php
+<?php
+
+$feeds = array("http://devopsreactions.tumblr.com/rss","http://tumblr.snipe.net/rss","http://nodejsreactions.tumblr.com/rss","http://securityreactions.tumblr.com/rss");
+
+$k = array_rand($feeds);
+$feed = implode(file($feeds[$k]));
+
+$xml = simplexml_load_string($feed);
+$json = json_encode($xml);
+$posts = json_decode($json,TRUE);
+
+$numposts = sizeof($posts['channel']['item']);
+$random = rand(0,$numposts-1);
+
+$title = preg_replace("/'/","",$posts['channel']['item'][$random]['title']);
+$description = $posts['channel']['item'][$random]['description'];
+
+$xpath = new DOMXPath(@DOMDocument::loadHTML($description));
+$img = $xpath->evaluate("string(//img/@src)");
+
+$programmingexcuse = exec("curl -s http://programmingexcuses.com | grep 'center' | head -n 1 | perl -p -e 's/.*<center.*><a.*>(.*)<\/a><\/center>/$1/';");
+$developerexcuse = exec("curl -s http://developerexcuses.com | grep 'center' | head -n 1 | perl -p -e 's/.*<center.*><a.*>(.*)<\/a><\/center>/$1/';");
+
+#$text = "<p style=font-size:20px>".$programmingexcuse."</p><h1 class=title>Developer Excuse</h1><p style=font-size:20px>".$developerexcuse."</p><h1 class=title>Devops Reactions</h1><p>".$title."</p>";
+$text = "<p>".$title."</p>";
+
+$calls[0]['widget'] = 'devopstext';
+$calls[1]['widget'] = 'devopsreactions';
+$calls[0]['data'] = array("auth_token" => "XXXXXXXXXXXX", "text" => "$text");
+$calls[1]['data'] = array("auth_token" => "XXXXXXXXXXXX", "title" => $title, "image" => "$img");
+
+foreach ($calls as $call) {
+
+  $data_string = json_encode($call['data']);
+  
+  $url = "http://belltv.bellcom.dk:3031/widgets/".$call['widget'];
+  $ch = curl_init($url);
+  curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+  curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+      'Content-Type: application/json',
+      'Content-Length: ' . strlen($data_string))
+  );
+  
+  $result = curl_exec($ch);
+}

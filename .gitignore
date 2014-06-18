@@ -4,3 +4,4 @@ config.yml
 log/*
 dashing.pid
 assets/images/daily_dilbert/latest.gif
+scripts/devopsreactions-feed.php
