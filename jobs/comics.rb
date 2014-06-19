@@ -34,6 +34,12 @@ SCHEDULER.every '60m', :first_in => 0 do |job|
   # wumo
   today = DateTime.now.strftime("%Y/%m/%d")  
   wumo_today = "http://kindofnormal.com/img/wumo/" + today + ".jpg"
-  send_event('wumo', { image: wumo_today })
-
+  url = URI.parse(wumo_today)
+  req = Net::HTTP.new(url.host, url.port)
+  res = req.request_head(url.path)
+  if res.code == "200"
+    send_event('wumo', { image: wumo_today })
+  else
+    send_event('wumo', { image: "http://kindofnormal.com/img/wumo/2014/06/12.jpg" })
+  end
 end
