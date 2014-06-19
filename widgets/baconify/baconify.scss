@@ -1,0 +1,20 @@
+.widget-baconify {
+	font-family: 'Oleo Script Swash Caps', cursive;
+	color: #C8513D;
+	overflow: hidden;
+	background-image: url('baconify.png');
+	background-repeat: no-repeat;
+}
+.widget-baconify #baconify-text {
+	width: 340px;
+	transform: rotate(-19.5deg);
+	-webkit-transform: rotate(-19.5deg); /* Safari and Chrome */
+	margin-top: 95px;
+	font-size: 95px;
+}
+.widget-baconify #attributions {
+	text-align:right;
+	transform: rotate(-19.5deg);
+	-webkit-transform: rotate(-19.5deg); /* Safari and Chrome */
+	margin-top:5px;
+}
