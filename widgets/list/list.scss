@@ -1,7 +1,7 @@
 // ----------------------------------------------------------------------------
 // Sass declarations
 // ----------------------------------------------------------------------------
-$background-color:  #0000FF;
+$background-color:  #3333FF;
 $value-color:       #fff;
 
 $title-color:       rgba(255, 255, 255, 0.7);
@@ -47,6 +47,7 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
     margin-left: 12px;
     font-weight: 600;
 // mmh
+    font-weight: bold;
     font-size: 24px;
     color: $value-color;
   }
