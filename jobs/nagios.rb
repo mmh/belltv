@@ -7,7 +7,7 @@ config = config[:nagios]
 SCHEDULER.every '30s' do
   environments = {
     main: { url: 'http://nagios.bellcom.dk/cgi-bin/nagios3', username: config[:nagios_user], password: config[:nagios_password] },
-    extern: { url: 'http://extern2.bellcom.dk:81/cgi-bin/nagios3/', username: config[:nagios_user], password: config[:nagios_password] },
+    extern: { url: 'http://extern2.bellcom.dk/cgi-bin/nagios3/', username: config[:nagios_user], password: config[:nagios_password] },
   }
 
   environments.each do |key, env|
