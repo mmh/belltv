@@ -40,6 +40,15 @@ SCHEDULER.every '60m', :first_in => 0 do |job|
   if res.code == "200"
     send_event('wumo', { image: wumo_today })
   else
-    send_event('wumo', { image: "http://kindofnormal.com/img/wumo/2014/06/12.jpg" })
+    yesterday = Date.today.prev_day.strftime("%Y/%m/%d")
+    wumo_yesterday = "http://kindofnormal.com/img/wumo/" + yesterday + ".jpg"
+    url = URI.parse(wumo_yesterday)
+    req = Net::HTTP.new(url.host, url.port)
+    res = req.request_head(url.path)
+    if res.code == "200"
+      send_event('wumo', { image: wumo_yesterday })
+    else
+      send_event('wumo', { image: "http://kindofnormal.com/img/wumo/2014/06/12.jpg" })
+    end
   end
 end
