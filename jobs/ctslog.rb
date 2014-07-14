@@ -6,12 +6,7 @@ SCHEDULER.every '1m', :first_in => 0 do |job|
   # Connect to cluster at search1:9200, sniff all nodes and round-robin between them
   es = Elasticsearch::Client.new host: 'logstash.bellcom.dk'
   
-  today = Time.now.strftime("%Y.%m.%d")
-  yesterday = Date.today.prev_day.strftime("%Y.%m.%d")
-  
-  
-  response = es.search index: 'logstash-' + today + ',logstash-' + yesterday,
-            body: { query: { match: { host: '192.168.1.11' } }, size: 5, sort: [ { "@timestamp" => 'desc' } ] }
+  response = es.search body: { query: { match: { host: '192.168.1.11' } }, size: 5, sort: [ { "@timestamp" => 'desc' } ] }
   
   mash = Hashie::Mash.new response
   data = [];
