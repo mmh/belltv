@@ -1,4 +1,5 @@
 require 'dashing'
+require 'ipaddr'
 
 $config = YAML.load File.open("config.yml")
 $config = $config[:dashing]
@@ -16,11 +17,16 @@ configure do
       end
     end
     def authorized?
-      @auth ||=  Rack::Auth::Basic::Request.new(request.env)
-      @auth.provided? && @auth.basic? && @auth.credentials && @auth.credentials == [
-        $config[:auth_user],
-        $config[:auth_pwd]
-      ]
+      reqIP = IPAddr.new(request.ip)
+      if(!$config[:ip].select{|ip| if(IPAddr.new(ip).include?(reqIP)) then ip end }.empty?) then
+        true
+      else
+        @auth ||=  Rack::Auth::Basic::Request.new(request.env)
+        @auth.provided? && @auth.basic? && @auth.credentials && @auth.credentials == [
+          $config[:auth_user],
+          $config[:auth_pwd]
+        ]
+      end
     end
   end
 end

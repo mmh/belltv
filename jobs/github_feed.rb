@@ -113,7 +113,7 @@ hist_size    = 7
 
 class String
   def truncate()
-    length > 60 ? "#{self[0...60]}..." : self
+    length > 58 ? "#{self[0...58]}..." : self
   end
 end
 

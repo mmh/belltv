@@ -1,32 +1,54 @@
 <script type='text/javascript'>
 $(function() {
-  Dashing.widget_base_dimensions = [160, 170]
+  Dashing.widget_base_dimensions = [170, 170]
   Dashing.numColumns = 8
+  Dashing.cycleDashboards({timeInSeconds: 30, stagger: true});
 });
 </script>
 
 <% content_for :title do %>Bellcom Screen<% end %>
+
+<!-- page 1 -->
 <div class="gridster">
   <ul>
-
+    <li data-row="1" data-col="1" data-sizex="8" data-sizey="1">
+      <div data-id="welcome" data-view="Text" data-title="Velkommen til Bellcom" data-text="Husk parkeringsbevis" data-moreinfo=""></div>
+    </li>
     <li data-row="1" data-col="1" data-sizex="2" data-sizey="2">
       <div data-view="Clock"></div>
       <i class="icon-time icon-background"></i>
     </li>
-    <li data-row="1" data-col="1" data-sizex="2" data-sizey="4">
-      <div data-id="online" data-view="Online" data-title="At the office?"></div>
-    </li>
     <li data-row="1" data-col="1" data-sizex="4" data-sizey="2">
-      <div data-id="weatherdmi" data-view="BigImage" data-image="http://servlet.dmi.dk/byvejr/servlet/byvejr_dag1?by=6000&mode=long" style="background-color:#dbdbd2;" data-max="true"></div>
+      <div data-id="opentickets" data-view="List" data-title="Åbne Tickets" data-unordered="true"></div>
+    </li>
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="4">
+      <div data-id="online" data-view="Online" data-title="På kontoret?"></div>
     </li>
     <li data-row="1" data-col="1" data-sizex="2" data-sizey="2">
       <div data-id="klimato" data-view="Klimato"></div>
       <i class="icon-sun icon-background"></i>
     </li>
-    <li data-row="1" data-col="1" data-sizex="2" data-sizey="2">
-        <div data-id="duks" data-view="Duks" data-title="Duks" data-text="When er køkkenbitch?"></div>
-      <i class="icon-food icon-background"></i>
+    <li data-row="1" data-col="1" data-sizex="4" data-sizey="2">
+      <div data-id="weatherdmi" data-view="BigImage" data-image="http://servlet.dmi.dk/byvejr/servlet/byvejr_dag1?by=6000&mode=long" style="background-color:#dbdbd2;" data-max="true"></div>
+    </li>
+  </ul>
+</div>
+
+<!-- page 2 -->
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="10" data-sizey="1">
+      <div data-id="github_feed" data-view="GithubFeed" data-title="Github News Feed"></div>
     </li>
 
+  </ul>
+</div>
+
+<!-- page 3 -->
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="8" data-sizey="6">
+      <div data-id="menu" data-view="BigImage" data-image="http://192.168.42.54/uge46-eva.png" style="background-color:#222222;" data-max="true"></div>
+    </li>
   </ul>
 </div>
